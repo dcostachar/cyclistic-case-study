@@ -1,11 +1,60 @@
+# Phase 1: Ask 
+
+<details>
+  <summary>Defining the business problem.</summary>
+
+## 1.1 Project Overview
+
+Cyclistic is a bike-share company based in Chicago, offering a diverse range of over 5,800 bicycles and 600 docking stations throughout the city. The company sets itself apart by providing inclusive options like reclining bikes, hand tricycles, and cargo bikes, catering to people with disabilities and those who prefer alternative bike types. While the majority of users ride for leisure, 30% utilize Cyclistic bikes for their daily commutes.
+
+Since its launch in 2016, Cyclistic has rapidly expanded, becoming a key player in Chicago's urban mobility landscape. The company offers flexible pricing plans, including single-ride passes, full-day passes, and annual memberships. Cyclistic’s finance team has identified that annual members are significantly more profitable than casual riders, prompting the director of marketing, Lily Moreno, to focus on converting casual riders into annual members. Moreno believes that a deeper understanding of the usage patterns between casual riders and annual members is essential to achieve this.
+
+## 1.2 Business Task
+
+Analyze Cyclistic historical bike trip data to understand the differences in usage patterns between casual riders and annual members. Use these insights to inform the development of a targeted marketing strategy to convert casual riders into annual members, ultimately driving Cyclistic’s growth and profitability.
+
+## 1.3 Key Stakeholders
+
+* **Lily Moreno:** Director of Marketing at Cyclistic, responsible for overseeing the marketing strategy and driving the initiative to increase annual memberships.
+* **Cyclistic Marketing Analytics Team:** A group of data analysts responsible for collecting, analyzing, and reporting data that helps guide Cyclistic's marketing strategies.
+* **Cyclistic Executive Team:** The decision-making body that will evaluate and approve the proposed marketing strategy based on the analysis and recommendations.
+
+</details>
+
+# Phase 2: Prepare
+
+<details>
+  <summary>Collecting and validating relevant data for analysis.</summary>
+
+## 2.1 About the Dataset
+
+Since Cyclistic is a fictional company, the Google Data Analytics program has recommended using data from Chicago's Divvy bicycle-sharing service for this case study. This data is provided by Motivate International Inc. under a specific data license agreement. The dataset used in this case study spans 12 months of trip data from 2023, covering over 5,800 bicycles across 600 docking stations. It includes user usage data, including bike types, start and end times, start and end stations, ride duration, and user types (casual or member).
+
+## 2.2 Data Compliance and Accessibility
+
+The data is publicly available from Lyft Bikes and Scooters, LLC under a non-exclusive, royalty-free, and perpetual license. Users can access, reproduce, analyze, and distribute the data for any lawful purpose, with certain conditions. The dataset cannot be used unlawfully, sold as a stand-alone commercial product, or linked to personally identifiable customer information.
+
+## 2.3 Data Integrity and Credibility
+
+The dataset is sourced from a reliable and publicly accessible platform, ensuring its credibility for analytical purposes. While it is comprehensive in terms of ride details, it lacks personal demographic information about the riders, limiting the ability to conduct analyses that link ride data to specific user demographics. However, the data's reliability is bolstered by its currentness (from 2023), consistent format, and comprehensive coverage over an entire year, providing a robust foundation for analysis.
+
+## 2.4 Data Organization and Verification
+
+The dataset is organized into 12 CSV files, each representing one month of the year and containing detailed ride information. The data is presented in a long format, where each row corresponds to a single observation linked to a unique ride ID, and each column captures a specific attribute of that ride, including bike type, start and end times, start and end stations, ride duration, and user type. This structured organization allows for efficient data processing, cleaning, and analysis. 
+
+</details>
+
 # Phase 3: Process
 
-In this phase, I will clean and transform the data to prepare it for analysis. I will use Docker to run
-a MySQL database and connect it to DataGrip, my integrated development environment (IDE), to perform the analysis.
+<details>
+  <summary>Cleaning and transforming data for analysis. </summary>
 
 ## 3.1 Importing the Data
 
 ### Creating a SQL Table and Importing CSV Data
+
+In this phase, I will clean and transform the data to prepare it for analysis. I will use Docker to run
+a MySQL database and connect it to DataGrip, my integrated development environment (IDE), to perform the analysis.
 
 First, I will download 12 months of trip data from 2023, with each month’s data stored in a separate CSV file. Upon
 inspecting the data, I observe that all 12 CSV files follow a consistent format in terms of the number of columns,
@@ -510,8 +559,12 @@ WITH start_station_id_fixed_trips AS (SELECT trips.ride_id,
 SELECT *
 FROM start_and_end_station_id_fixed_trips;
 ```
+</details>
 
 # Phase 4: Analyze
+
+<details>
+  <summary>Analyzing data using SQL to uncover trends and generate insights.</summary>
 
 ## 4.1 Bike Usage Patterns
 
@@ -857,6 +910,84 @@ GROUP BY hour_of_day
 ORDER BY trips_per_hour_of_day DESC;
 ```
 
+</details>
+
 # Phase 5: Share
 
+<details>
+  <summary>Presenting findings through Tableau visualizations to make insights accessible and actionable.</summary>
+
+## Distribution of Casuals vs. Members
+
+Let's begin by breaking down casuals and members in our dataset. We see that there are ~2.8 million members and ~1.5 million casuals.
+
+<img width="312" alt="Picture1" src="https://github.com/user-attachments/assets/ac74ca43-bcb6-410d-857a-c26db311967c">
+
+
+## Most and Least Used Bike Types
+
+Classic bikes are more popular than electric bikes across both categories, while docked bikes are only used by casuals.
+
+(ADD IMAGE)
+
+## Top 10 Start and End Stations 
+
+Looking at the most popular start and end stations for casual riders, here are my key insights: 
+
+**Tourist and Scenic Spots:** Many locations are well-known scenic or tourist areas in Chicago, such as Streeter Dr & Grand Ave (near Navy Pier and Lake Michigan), Millennium Park, Shedd Aquarium, Theater on the Lake, and Adler Planetarium. This suggests that casual riders may be tourists or people exploring popular sights.
+
+**Lakefront Locations:** Several stations are located along or near Lake Michigan, including DuSable Lake Shore Dr & Monroe St, Michigan Ave & Oak St, and Montrose Harbor, indicating that casual riders are drawn to scenic lakefront routes.
+
+**Recreational Areas:** High usage at stations near parks and recreational spots, like Millennium Park and DuSable Harbor, supports the idea that casual riders often use bikes for leisure rather than commuting
+
+**Round Trips:** The overlap between popular start and end locations suggests casual riders frequently take round trips, likely for sightseeing or short rides that begin and end near major attractions.
+Overall, these patterns indicate that casual riders primarily use the bike-sharing service for leisure and sightseeing, particularly around popular attractions and the lakefront, rather than for daily commuting.
+
+(ADD IMAGE)
+
+Looking at the most popular start and end stations for members, here are my key insights: 
+Downtown Locations: Many stations, such as Clinton St & Washington Blvd, Kingsbury St & Kinzie St, Clark St & Elm St, and Clinton St & Madison St, are near key intersections in busy downtown areas. This suggests that member riders are likely using bike-sharing for commuting or accessing frequently visited spots in the city center, such as offices.
+University and Residential Areas: Stations like University Ave & 57th St, Loomis St & Lexington St, and Ellis Ave & 60th St suggest that some members may be students or residents who use bike-sharing regularly within their neighbourhoods or for commuting to nearby facilities.
+Broader Distribution Across Residential, Commercial, and Practical Locations: Unlike casual riders, who tend to cluster around tourist-heavy areas, member trips are spread across a wider range of residential and commercial locations. This indicates that members prioritize practical locations closer to workplaces, residences, and transit hubs, highlighting a focus on commuting and utility trips rather than leisure or tourism.
+Consistent Start and End Patterns: Similar to casual riders, the overlap between popular start and end stations suggests that members often take round trips or short point-to-point rides within the same area, which aligns with typical commuting behaviour.
+Overall, these patterns indicate that members primarily use the bike-sharing service for commuting to work or school or for routine travel within the city, focusing on practical and accessible locations over tourist destinations or scenic spots.
+
+
+
+
+## Average Ride Durations and Distances
+
+Looking at the average ride duration and distance for casual riders vs. members, we observe that casual riders, on average, use the service twice as long as members; however, the actual distance covered is comparable. This suggests that casual riders are likelier to take long, leisurely trips, possibly for sightseeing or recreation. In contrast, members use the service more efficiently, taking shorter, practical trips like commuting.
+In summary, this pattern indicates that casual riders use the service for leisure-oriented, extended rides, while members prioritize efficiency, consistent with a commuting or task-focused approach to bike-sharing.
+
+
+## Trip Timing Patterns by Month, Day, and Hour
+Observing trip timing patterns by month, day, and hour, here are my key insights:
+Monthly Trends: Both casual and member riders show increased activity in warmer months, peaking from May to September. Casual riders exhibit a more pronounced summer peak, especially around July, suggesting they use the service primarily for leisure or tourism, which is more seasonal. In contrast, member usage remains relatively steady year-round, with only a slight increase in summer, indicating consistent use likely for commuting or regular transportation needs.
+Daily Trends: Casual riders prefer weekends, especially Saturdays, while members have steady weekday usage with minor fluctuations. This pattern reinforces the idea that casual users are primarily engaging in leisure or recreational rides on weekends, whereas members’ consistent weekday usage aligns with commuting or routine trips.
+Hourly Trends: Casual riders’ trips peak in the afternoon (3 PM - 5 PM), suggesting a preference for leisurely rides during those hours. Member riders show two distinct peaks: one around 8 AM and another around 5 PM, typical of commuting patterns as users ride to and from work during rush hours. Both groups have significantly lower activity late at night, indicating the service is primarily used during daytime and evening hours.
+Overall, these patterns indicate that casual riders use the bike-sharing service seasonally, favouring summer months, weekends, and afternoons, reflecting a leisure-oriented use. Member riders display a more consistent, year-round pattern, with weekday peaks during commute hours, suggesting practical, task-focused usage.
+
+
+</details>
+
 # Phase 6: Act 
+
+<details>
+  <summary>Reporting the results of the analysis to project stakeholders and providing recommendations to address the business problem.</summary>
+    
+<br /> Based on our findings on casual and member rider patterns, here are targeted marketing strategies to encourage casual riders to become members: <br />
+
+**Seasonal Promotions During Peak Months:** Casual riders are most active in the summer, so offering limited-time discounts or promotional rates for new memberships during these months (e.g., 20% off if they sign up in July) can capitalize on when they’re most engaged with the service. Summer-only perks like free ride credits or priority access to busy stations can further incentivize them to join.
+
+**Weekend-Exclusive Membership Benefits:** Since casual riders favour weekend rides, create a “Weekend Warrior” membership option that includes benefits such as extra ride time or priority access to high-demand stations on weekends. Emphasize the cost savings for frequent weekend usage, making the membership appealing to those who primarily ride on weekends.
+
+**Cost-Comparison Campaigns Near Popular Tourist and Leisure Spots:** Many casual riders may not realize the cost benefits of a membership. Targeted ads at popular casual rider locations (like Streeter Dr, Millennium Park, and Shedd Aquarium) can showcase how a membership helps avoid per-ride fees, which is ideal for those exploring the city. Partnering with local attractions or events near these stations to offer temporary discounts or “day passes” with an upgrade option can also boost membership interest.
+
+**Free Trial or Flexible Membership Options for Leisure Riders:** Providing a one-week or one-month trial during summer allows casual riders to experience the benefits of having a membership with no risk. Offering a discounted first month after the trial could encourage them to stay. Alternatively, short-term memberships with flexible terms, such as pausing or cancelling in off-peak seasons, can attract riders who don’t want a year-round commitment.
+
+**Incentives for Longer Rides:** Since casual riders tend to enjoy scenic, longer rides, offer rewards for completing rides over a certain distance or duration (e.g., 5 km or 20 minutes), reinforcing the value of a membership for those seeking leisurely experiences.
+
+These strategies leverage casual riders’ seasonal and weekend preferences and appeal to their potential for more frequent use while reducing the perceived risk of commitment.
+
+</details>
