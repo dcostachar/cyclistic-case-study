@@ -921,14 +921,21 @@ ORDER BY trips_per_hour_of_day DESC;
 
 Let's begin by breaking down casuals and members in our dataset. We see that there are ~2.8 million members and ~1.5 million casuals.
 
-<img width="312" alt="Picture1" src="https://github.com/user-attachments/assets/ac74ca43-bcb6-410d-857a-c26db311967c">
+<div align="center">
+<img width="201" alt="1" src="https://github.com/user-attachments/assets/34cd8708-3f1a-4311-bb5f-dc955f9f5a1d">
+</div>
 
+<div align="center">
+<img width="302" alt="2" src="https://github.com/user-attachments/assets/b0a67d06-8481-4ede-874d-9790a5c98932">
+</div>
 
 ## Most and Least Used Bike Types
 
 Classic bikes are more popular than electric bikes across both categories, while docked bikes are only used by casuals.
 
-(ADD IMAGE)
+<div align="center">
+<img width="421" alt="3" src="https://github.com/user-attachments/assets/d5bffcbf-fa0b-4d20-8451-ba1230973bb2">
+</div>
 
 ## Top 10 Start and End Stations 
 
@@ -943,31 +950,51 @@ Looking at the most popular start and end stations for casual riders, here are m
 **Round Trips:** The overlap between popular start and end locations suggests casual riders frequently take round trips, likely for sightseeing or short rides that begin and end near major attractions.
 Overall, these patterns indicate that casual riders primarily use the bike-sharing service for leisure and sightseeing, particularly around popular attractions and the lakefront, rather than for daily commuting.
 
-(ADD IMAGE)
+<div align="center">
+<img width="859" alt="image" src="https://github.com/user-attachments/assets/0987abab-31a3-49b6-b81b-4ed06b29bce5">
+</div>
 
-Looking at the most popular start and end stations for members, here are my key insights: 
-Downtown Locations: Many stations, such as Clinton St & Washington Blvd, Kingsbury St & Kinzie St, Clark St & Elm St, and Clinton St & Madison St, are near key intersections in busy downtown areas. This suggests that member riders are likely using bike-sharing for commuting or accessing frequently visited spots in the city center, such as offices.
-University and Residential Areas: Stations like University Ave & 57th St, Loomis St & Lexington St, and Ellis Ave & 60th St suggest that some members may be students or residents who use bike-sharing regularly within their neighbourhoods or for commuting to nearby facilities.
-Broader Distribution Across Residential, Commercial, and Practical Locations: Unlike casual riders, who tend to cluster around tourist-heavy areas, member trips are spread across a wider range of residential and commercial locations. This indicates that members prioritize practical locations closer to workplaces, residences, and transit hubs, highlighting a focus on commuting and utility trips rather than leisure or tourism.
-Consistent Start and End Patterns: Similar to casual riders, the overlap between popular start and end stations suggests that members often take round trips or short point-to-point rides within the same area, which aligns with typical commuting behaviour.
+<br /> Looking at the most popular start and end stations for members, here are my key insights: <br /> 
+
+**Downtown Locations:** Many stations, such as Clinton St & Washington Blvd, Kingsbury St & Kinzie St, Clark St & Elm St, and Clinton St & Madison St, are near key intersections in busy downtown areas. This suggests that member riders are likely using bike-sharing for commuting or accessing frequently visited spots in the city center, such as offices.
+
+**University and Residential Areas:** Stations like University Ave & 57th St, Loomis St & Lexington St, and Ellis Ave & 60th St suggest that some members may be students or residents who use bike-sharing regularly within their neighbourhoods or for commuting to nearby facilities.
+
+**Broader Distribution Across Residential, Commercial, and Practical Locations:** Unlike casual riders, who tend to cluster around tourist-heavy areas, member trips are spread across a wider range of residential and commercial locations. This indicates that members prioritize practical locations closer to workplaces, residences, and transit hubs, highlighting a focus on commuting and utility trips rather than leisure or tourism.
+
+**Consistent Start and End Patterns:** Similar to casual riders, the overlap between popular start and end stations suggests that members often take round trips or short point-to-point rides within the same area, which aligns with typical commuting behaviour.
+
 Overall, these patterns indicate that members primarily use the bike-sharing service for commuting to work or school or for routine travel within the city, focusing on practical and accessible locations over tourist destinations or scenic spots.
 
-
-
+<div align="center">
+<img width="859" alt="image" src="https://github.com/user-attachments/assets/7653ce55-6912-46dc-92c4-a911209bf27a">
+</div>
 
 ## Average Ride Durations and Distances
 
 Looking at the average ride duration and distance for casual riders vs. members, we observe that casual riders, on average, use the service twice as long as members; however, the actual distance covered is comparable. This suggests that casual riders are likelier to take long, leisurely trips, possibly for sightseeing or recreation. In contrast, members use the service more efficiently, taking shorter, practical trips like commuting.
+
 In summary, this pattern indicates that casual riders use the service for leisure-oriented, extended rides, while members prioritize efficiency, consistent with a commuting or task-focused approach to bike-sharing.
 
+<div align="center">
+<img width="529" alt="6" src="https://github.com/user-attachments/assets/62e99864-3f60-4ada-a388-f54b78c67ce6">
+</div>
 
 ## Trip Timing Patterns by Month, Day, and Hour
+
 Observing trip timing patterns by month, day, and hour, here are my key insights:
-Monthly Trends: Both casual and member riders show increased activity in warmer months, peaking from May to September. Casual riders exhibit a more pronounced summer peak, especially around July, suggesting they use the service primarily for leisure or tourism, which is more seasonal. In contrast, member usage remains relatively steady year-round, with only a slight increase in summer, indicating consistent use likely for commuting or regular transportation needs.
-Daily Trends: Casual riders prefer weekends, especially Saturdays, while members have steady weekday usage with minor fluctuations. This pattern reinforces the idea that casual users are primarily engaging in leisure or recreational rides on weekends, whereas members’ consistent weekday usage aligns with commuting or routine trips.
-Hourly Trends: Casual riders’ trips peak in the afternoon (3 PM - 5 PM), suggesting a preference for leisurely rides during those hours. Member riders show two distinct peaks: one around 8 AM and another around 5 PM, typical of commuting patterns as users ride to and from work during rush hours. Both groups have significantly lower activity late at night, indicating the service is primarily used during daytime and evening hours.
+
+**Monthly Trends:** Both casual and member riders show increased activity in warmer months, peaking from May to September. Casual riders exhibit a more pronounced summer peak, especially around July, suggesting they use the service primarily for leisure or tourism, which is more seasonal. In contrast, member usage remains relatively steady year-round, with only a slight increase in summer, indicating consistent use likely for commuting or regular transportation needs.
+
+**Daily Trends:** Casual riders prefer weekends, especially Saturdays, while members have steady weekday usage with minor fluctuations. This pattern reinforces the idea that casual users are primarily engaging in leisure or recreational rides on weekends, whereas members’ consistent weekday usage aligns with commuting or routine trips.
+
+**Hourly Trends:** Casual riders’ trips peak in the afternoon (3 PM - 5 PM), suggesting a preference for leisurely rides during those hours. Member riders show two distinct peaks: one around 8 AM and another around 5 PM, typical of commuting patterns as users ride to and from work during rush hours. Both groups have significantly lower activity late at night, indicating the service is primarily used during daytime and evening hours.
+
 Overall, these patterns indicate that casual riders use the bike-sharing service seasonally, favouring summer months, weekends, and afternoons, reflecting a leisure-oriented use. Member riders display a more consistent, year-round pattern, with weekday peaks during commute hours, suggesting practical, task-focused usage.
 
+<div align="center">
+<img width="874" alt="7" src="https://github.com/user-attachments/assets/c8763de8-9cd3-4bfd-b5a4-1119161cae77">
+</div>
 
 </details>
 
