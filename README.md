@@ -948,6 +948,7 @@ Looking at the most popular start and end stations for casual riders, here are m
 **Recreational Areas:** High usage at stations near parks and recreational spots, like Millennium Park and DuSable Harbor, supports the idea that casual riders often use bikes for leisure rather than commuting
 
 **Round Trips:** The overlap between popular start and end locations suggests casual riders frequently take round trips, likely for sightseeing or short rides that begin and end near major attractions.
+
 Overall, these patterns indicate that casual riders primarily use the bike-sharing service for leisure and sightseeing, particularly around popular attractions and the lakefront, rather than for daily commuting.
 
 <div align="center">
