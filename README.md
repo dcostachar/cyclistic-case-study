@@ -4,7 +4,8 @@ Author: Charlene D'Costa <br />
 Date: November 1, 2024 <br />
 Capstone project for the Google Data Analytics Professional Certificate. <br />
 
-[Tableau Dashboard](https://public.tableau.com/app/profile/charlene.d.costa/viz/CyclisticBikeShareAnalysisDashboard_17280817981870/CyclisticBikeShareAnalysisDashboard)
+[Tableau Dashboard](https://public.tableau.com/app/profile/charlene.d.costa/viz/CyclisticBikeShareAnalysisDashboard_17280817981870/CyclisticBikeShareAnalysisDashboard) <br />
+[Divvy Bike Share Datasets](https://github.com/dcostachar/cyclistic-case-study/tree/main/datasets)
 
 # Phase 1: Ask 
 
